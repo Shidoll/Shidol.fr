@@ -6,11 +6,16 @@
     font-family: 'Roboto', sans-serif;
 }
 
+    height: 100%;
+    overflow: hidden; /* Retire la scrollbar */
+}
+
 /* Arrière-plan global et couleur du texte */
 body {
     background-color: #000000;
     color: #ffffff;
     font-family: 'Roboto', sans-serif;
+    position: relative;
 }
 
 /* Police pour les titres et les grandes sections */
@@ -22,153 +27,98 @@ h1, h2, h3, h4, h5, h6,
     font-family: 'CODE', monospace;
 }
 
-/* Style pour la section principale */
-main {
-    padding: 20px;
-}
+/* Positionnement des sections */
 
-/* Style pour l'introduction */
+/* Introduction en haut à gauche */
 #Introduction {
-    text-align: center;
-    margin-bottom: 40px;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    max-width: 45%; /* Limite la largeur */
 }
 
 #Introduction .Shidol {
-    font-size: 3em;
+    font-size: 2.5em;
     font-weight: bold;
     margin-bottom: 10px;
 }
 
 #Introduction .Work {
-    font-size: 2em;
+    font-size: 1.5em;
     color: #cccccc;
     margin-bottom: 10px;
 }
 
 #Introduction .description {
-    font-size: 1.2em;
-    max-width: 800px;
-    margin: 0 auto;
+    font-size: 1em;
     line-height: 1.6;
 }
 
-/* Style pour la section "About" */
+/* About en haut à droite */
 .About {
-    margin: 40px 0;
-    font-size: 1.1em;
-    line-height: 1.8;
-    max-width: 800px;
-    margin-left: auto;
-    margin-right: auto;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    max-width: 45%; /* Limite la largeur */
     text-align: justify;
+    font-size: 1em;
+    line-height: 1.6;
 }
 
-/* Style pour la section "Skills" */
+/* Skills en bas à gauche */
+.skill {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    max-width: 45%; /* Limite la largeur */
+}
+
 .skill .title {
     font-size: 2em;
     font-weight: bold;
-    text-align: center;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 
 .skill .list {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
+    gap: 10px;
 }
 
 .skill .list div {
+    width: 60px;
+    height: 60px;
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 80px;
-    height: 80px;
-    border: 1px solid #444444;
-    border-radius: 10px;
-    transition: transform 0.2s;
-}
-
-.skill .list div:hover {
-    transform: scale(1.1);
 }
 
 .skill .list img {
-    width: 50px;
-    height: 50px;
-}
-
-/* Style pour la section "Project" */
-.project .title {
-    font-size: 2em;
-    font-weight: bold;
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-.project .list {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-}
-
-.project #project1 {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    background-color: #111111;
-    padding: 20px;
-    border-radius: 10px;
-    max-width: 300px;
-}
-
-.project #project1 img {
     width: 100%;
-    height: auto;
-    border-radius: 10px;
-    margin-bottom: 10px;
+    height: 100%;
 }
 
-.project #project1 .description {
-    font-size: 1em;
-    margin-bottom: 10px;
-}
-
-.project #project1 .html, 
-.project #project1 .javascript, 
-.project #project1 .php,
-.project #project1 .figma, 
-.project #project1 .GitHub, 
-.project #project1 .virtualStudioCode {
-    font-family: 'Roboto', sans-serif;
-    font-size: 0.9em;
-    color: #bbbbbb;
-    margin-bottom: 5px;
-}
-
-/* Style pour l'en-tête et les contacts */
+/* Contacts en bas à gauche sous les skills */
 header {
-    padding: 20px;
-    text-align: center;
-    background-color: #111111;
-    border-top: 2px solid #333333;
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    margin-top: 10px;
 }
 
 .contacts .icon {
     display: inline-block;
-    margin: 0 10px;
+    margin-right: 10px;
 }
 
 .contacts .icon img {
     width: 40px;
     height: 40px;
-    transition: transform 0.2s;
 }
 
-.contacts .icon img:hover {
-    transform: scale(1.1);
+/* Masquer la section Project */
+.project {
+    display: none;
 }
 
 /* Polices personnalisées */
